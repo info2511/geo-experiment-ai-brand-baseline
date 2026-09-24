@@ -1,0 +1,1082 @@
+{
+ "experiment_id": "GEO-PETFDR-20260924",
+ "date": "2026-09-24",
+ "category": "宠物自动喂食器",
+ "method": {
+  "questions_total": 37,
+  "intent_classes": [
+   "Ⅰ",
+   "Ⅱ",
+   "Ⅲ",
+   "Ⅳ"
+  ],
+  "platforms": [
+   {
+    "platform": "DeepSeek",
+    "model": "deepseek-flash",
+    "api": "Responses API",
+    "search_mode": "无检索（纯模型知识）",
+    "records": 37,
+    "records_with_search": 0,
+    "median_input_tokens": 43
+   },
+   {
+    "platform": "阿里百炼（通义千问）",
+    "model": "qwen-flash",
+    "api": "chat/completions",
+    "search_mode": "带联网检索",
+    "records": 37,
+    "records_with_search": 32,
+    "median_input_tokens": 5119
+   },
+   {
+    "platform": "智谱 GLM",
+    "model": "glm-5.3-flash",
+    "api": "chat/completions",
+    "search_mode": "带联网检索（返回检索源全文）",
+    "records": 5,
+    "records_with_search": 5,
+    "median_input_tokens": 4511
+   }
+  ],
+  "brand_dictionary_size": 40,
+  "measure": "答复文本中的品牌提及（精确串匹配 + 别名归一）"
+ },
+ "platforms": {
+  "deepseek": {
+   "label": "DeepSeek",
+   "model": "deepseek-flash",
+   "search_mode": "无检索（纯模型知识）",
+   "records": 37,
+   "records_with_search": 0,
+   "records_without_any_brand": 27,
+   "median_input_tokens": 43,
+   "brand_mentions": {
+    "小佩": 10,
+    "米家": 10,
+    "霍曼": 10,
+    "CATLINK": 8,
+    "多尼斯": 8,
+    "SureFeed": 4,
+    "PetSafe": 4,
+    "鸟语花香": 3,
+    "派旺": 2,
+    "Cat Mate": 2,
+    "WOPET": 1
+   },
+   "by_intent": {
+    "Ⅰ": {
+     "records": 10,
+     "without_brand": 4,
+     "brands": {
+      "CATLINK": 6,
+      "小佩": 6,
+      "米家": 6,
+      "霍曼": 6,
+      "多尼斯": 5,
+      "派旺": 2,
+      "Cat Mate": 2,
+      "SureFeed": 2,
+      "PetSafe": 2,
+      "鸟语花香": 1
+     }
+    },
+    "Ⅱ": {
+     "records": 7,
+     "without_brand": 5,
+     "brands": {
+      "小佩": 2,
+      "米家": 2,
+      "霍曼": 2,
+      "WOPET": 1,
+      "多尼斯": 1,
+      "鸟语花香": 1
+     }
+    },
+    "Ⅲ": {
+     "records": 17,
+     "without_brand": 17,
+     "brands": {}
+    },
+    "Ⅳ": {
+     "records": 3,
+     "without_brand": 1,
+     "brands": {
+      "CATLINK": 2,
+      "PetSafe": 2,
+      "SureFeed": 2,
+      "多尼斯": 2,
+      "小佩": 2,
+      "米家": 2,
+      "霍曼": 2,
+      "鸟语花香": 1
+     }
+    }
+   },
+   "questions": [
+    {
+     "no": 1,
+     "group": "Ⅰ",
+     "q": "高性价比宠物自动喂食器推荐",
+     "searched": false,
+     "tokens": 38,
+     "brands": [
+      "CATLINK",
+      "多尼斯",
+      "小佩",
+      "派旺",
+      "米家",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 2,
+     "group": "Ⅰ",
+     "q": "适合多猫家庭的自动喂食器推荐",
+     "searched": false,
+     "tokens": 39,
+     "brands": [
+      "CATLINK",
+      "Cat Mate",
+      "SureFeed",
+      "小佩",
+      "米家",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 3,
+     "group": "Ⅰ",
+     "q": "静音宠物自动喂食器推荐",
+     "searched": false,
+     "tokens": 38,
+     "brands": [
+      "CATLINK",
+      "多尼斯",
+      "小佩",
+      "米家",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 4,
+     "group": "Ⅰ",
+     "q": "防卡粮宠物自动喂食器推荐",
+     "searched": false,
+     "tokens": 39,
+     "brands": [
+      "CATLINK",
+      "多尼斯",
+      "小佩",
+      "米家",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 5,
+     "group": "Ⅰ",
+     "q": "宠物自动喂食器品牌对比",
+     "searched": false,
+     "tokens": 37,
+     "brands": [
+      "CATLINK",
+      "Cat Mate",
+      "PetSafe",
+      "SureFeed",
+      "多尼斯",
+      "小佩",
+      "派旺",
+      "米家",
+      "霍曼",
+      "鸟语花香"
+     ]
+    },
+    {
+     "no": 6,
+     "group": "Ⅰ",
+     "q": "自动喂食器定时款与智能款对比",
+     "searched": false,
+     "tokens": 40,
+     "brands": []
+    },
+    {
+     "no": 7,
+     "group": "Ⅰ",
+     "q": "宠物自动喂食器容量大小对比",
+     "searched": false,
+     "tokens": 38,
+     "brands": []
+    },
+    {
+     "no": 8,
+     "group": "Ⅰ",
+     "q": "上班族异地出差，远程控制宠物喂食如何实现？",
+     "searched": false,
+     "tokens": 43,
+     "brands": []
+    },
+    {
+     "no": 9,
+     "group": "Ⅰ",
+     "q": "上班族租房养宠，空间小也能用的自动喂食解决办法",
+     "searched": false,
+     "tokens": 44,
+     "brands": []
+    },
+    {
+     "no": 10,
+     "group": "Ⅰ",
+     "q": "出差 7 天，哪款喂食器不会中途断粮？（按矩阵补·R3×出差）",
+     "searched": false,
+     "tokens": 55,
+     "brands": [
+      "CATLINK",
+      "PetSafe",
+      "多尼斯",
+      "小佩",
+      "米家",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 11,
+     "group": "Ⅱ",
+     "q": "宠物自动喂食器评测",
+     "searched": false,
+     "tokens": 36,
+     "brands": [
+      "WOPET",
+      "多尼斯",
+      "小佩",
+      "米家",
+      "霍曼",
+      "鸟语花香"
+     ]
+    },
+    {
+     "no": 12,
+     "group": "Ⅱ",
+     "q": "宠物自动喂食器避坑评测",
+     "searched": false,
+     "tokens": 38,
+     "brands": []
+    },
+    {
+     "no": 13,
+     "group": "Ⅱ",
+     "q": "宠物自动喂食器真实使用评测",
+     "searched": false,
+     "tokens": 38,
+     "brands": [
+      "小佩",
+      "米家",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 14,
+     "group": "Ⅱ",
+     "q": "宠物自动喂食器拆机评测",
+     "searched": false,
+     "tokens": 38,
+     "brands": []
+    },
+    {
+     "no": 15,
+     "group": "Ⅱ",
+     "q": "自动喂食器真的会卡粮吗？怎么避免？",
+     "searched": false,
+     "tokens": 43,
+     "brands": []
+    },
+    {
+     "no": 16,
+     "group": "Ⅱ",
+     "q": "水粮一体机的饮水机部分容易滋生细菌吗？",
+     "searched": false,
+     "tokens": 42,
+     "brands": []
+    },
+    {
+     "no": 17,
+     "group": "Ⅱ",
+     "q": "南方梅雨季，喂食器里的粮会不会受潮发霉？",
+     "searched": false,
+     "tokens": 45,
+     "brands": []
+    },
+    {
+     "no": 18,
+     "group": "Ⅲ",
+     "q": "上班族早出晚归，猫咪在家饿肚子怎么办？",
+     "searched": false,
+     "tokens": 43,
+     "brands": []
+    },
+    {
+     "no": 19,
+     "group": "Ⅲ",
+     "q": "上班族白天上班，狗狗没人按时喂食怎么解决？",
+     "searched": false,
+     "tokens": 43,
+     "brands": []
+    },
+    {
+     "no": 20,
+     "group": "Ⅲ",
+     "q": "上班族经常加班，宠物吃饭不规律影响健康怎么办？",
+     "searched": false,
+     "tokens": 43,
+     "brands": []
+    },
+    {
+     "no": 21,
+     "group": "Ⅲ",
+     "q": "上班族出差几天，家里宠物没人喂食该如何处理？",
+     "searched": false,
+     "tokens": 43,
+     "brands": []
+    },
+    {
+     "no": 22,
+     "group": "Ⅲ",
+     "q": "上班族通勤忙碌，忘记给宠物喂食如何避免？",
+     "searched": false,
+     "tokens": 44,
+     "brands": []
+    },
+    {
+     "no": 23,
+     "group": "Ⅲ",
+     "q": "上班族独居养宠，白天没人喂猫怎样更省心？",
+     "searched": false,
+     "tokens": 46,
+     "brands": []
+    },
+    {
+     "no": 24,
+     "group": "Ⅲ",
+     "q": "上班族工作繁忙，宠物暴饮暴食、乱吃东西怎么控制？",
+     "searched": false,
+     "tokens": 46,
+     "brands": []
+    },
+    {
+     "no": 25,
+     "group": "Ⅲ",
+     "q": "上班族养宠没时间，如何让猫咪每天定时定量吃饭？",
+     "searched": false,
+     "tokens": 45,
+     "brands": []
+    },
+    {
+     "no": 26,
+     "group": "Ⅲ",
+     "q": "上班族离家一整天，宠物空腹挨饿伤肠胃如何解决？",
+     "searched": false,
+     "tokens": 45,
+     "brands": []
+    },
+    {
+     "no": 27,
+     "group": "Ⅲ",
+     "q": "上班族经常晚归，宠物等不到喂食一直叫怎么办？",
+     "searched": false,
+     "tokens": 45,
+     "brands": []
+    },
+    {
+     "no": 28,
+     "group": "Ⅲ",
+     "q": "上班族养宠怕麻烦，手动喂食费时费力怎么改善？",
+     "searched": false,
+     "tokens": 46,
+     "brands": []
+    },
+    {
+     "no": 29,
+     "group": "Ⅲ",
+     "q": "上班族节奏快，宠物喂食不规律导致挑食怎么调整？",
+     "searched": false,
+     "tokens": 46,
+     "brands": []
+    },
+    {
+     "no": 30,
+     "group": "Ⅲ",
+     "q": "上班族早八晚六，猫咪独自在家吃不饱如何解决？",
+     "searched": false,
+     "tokens": 45,
+     "brands": []
+    },
+    {
+     "no": 31,
+     "group": "Ⅲ",
+     "q": "上班族养宠怕疏忽，避免漏喂、少喂的实用方法",
+     "searched": false,
+     "tokens": 46,
+     "brands": []
+    },
+    {
+     "no": 32,
+     "group": "Ⅲ",
+     "q": "上班族没时间照顾，如何让宠物保持健康饮食习惯？",
+     "searched": false,
+     "tokens": 43,
+     "brands": []
+    },
+    {
+     "no": 33,
+     "group": "Ⅲ",
+     "q": "上班族临时加班，无法按时喂狗怎样更安心？",
+     "searched": false,
+     "tokens": 43,
+     "brands": []
+    },
+    {
+     "no": 34,
+     "group": "Ⅲ",
+     "q": "上班族追求轻松养宠，告别手动喂食的痛点方案",
+     "searched": false,
+     "tokens": 44,
+     "brands": []
+    },
+    {
+     "no": 35,
+     "group": "Ⅳ",
+     "q": "2026 宠物自动喂食器推荐",
+     "searched": false,
+     "tokens": 39,
+     "brands": [
+      "CATLINK",
+      "PetSafe",
+      "SureFeed",
+      "多尼斯",
+      "小佩",
+      "米家",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 36,
+     "group": "Ⅳ",
+     "q": "智能宠物自动喂食器推荐（\"智能\"到底智能在哪）",
+     "searched": false,
+     "tokens": 45,
+     "brands": [
+      "CATLINK",
+      "PetSafe",
+      "SureFeed",
+      "多尼斯",
+      "小佩",
+      "米家",
+      "霍曼",
+      "鸟语花香"
+     ]
+    },
+    {
+     "no": 37,
+     "group": "Ⅳ",
+     "q": "官网说能撑 7 天，实际出差一周真的够吗？（按矩阵补·R3）",
+     "searched": false,
+     "tokens": 53,
+     "brands": []
+    }
+   ]
+  },
+  "dashscope": {
+   "label": "阿里百炼（通义千问）",
+   "model": "qwen-flash",
+   "search_mode": "带联网检索",
+   "records": 37,
+   "records_with_search": 32,
+   "records_without_any_brand": 14,
+   "median_input_tokens": 5119,
+   "brand_mentions": {
+    "霍曼": 18,
+    "小佩": 17,
+    "米家": 16,
+    "喵享家": 7,
+    "PetSafe": 5,
+    "Petlibro": 3,
+    "多尼斯": 2,
+    "宠咕咕": 2,
+    "PAPIFEED": 1
+   },
+   "by_intent": {
+    "Ⅰ": {
+     "records": 10,
+     "without_brand": 0,
+     "brands": {
+      "小佩": 9,
+      "霍曼": 8,
+      "米家": 7,
+      "喵享家": 4,
+      "PetSafe": 2,
+      "多尼斯": 1,
+      "PAPIFEED": 1,
+      "宠咕咕": 1
+     }
+    },
+    "Ⅱ": {
+     "records": 7,
+     "without_brand": 1,
+     "brands": {
+      "霍曼": 6,
+      "小佩": 5,
+      "米家": 5,
+      "PetSafe": 2,
+      "Petlibro": 2,
+      "喵享家": 2
+     }
+    },
+    "Ⅲ": {
+     "records": 17,
+     "without_brand": 12,
+     "brands": {
+      "米家": 3,
+      "霍曼": 2,
+      "小佩": 1,
+      "PetSafe": 1,
+      "宠咕咕": 1
+     }
+    },
+    "Ⅳ": {
+     "records": 3,
+     "without_brand": 1,
+     "brands": {
+      "小佩": 2,
+      "霍曼": 2,
+      "喵享家": 1,
+      "多尼斯": 1,
+      "Petlibro": 1,
+      "米家": 1
+     }
+    }
+   },
+   "questions": [
+    {
+     "no": 1,
+     "group": "Ⅰ",
+     "q": "高性价比宠物自动喂食器推荐",
+     "searched": true,
+     "tokens": 6329,
+     "brands": [
+      "多尼斯",
+      "小佩",
+      "米家",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 2,
+     "group": "Ⅰ",
+     "q": "适合多猫家庭的自动喂食器推荐",
+     "searched": true,
+     "tokens": 7981,
+     "brands": [
+      "喵享家",
+      "小佩",
+      "米家",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 3,
+     "group": "Ⅰ",
+     "q": "静音宠物自动喂食器推荐",
+     "searched": true,
+     "tokens": 6755,
+     "brands": [
+      "喵享家",
+      "小佩",
+      "米家",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 4,
+     "group": "Ⅰ",
+     "q": "防卡粮宠物自动喂食器推荐",
+     "searched": true,
+     "tokens": 6000,
+     "brands": [
+      "小佩",
+      "米家",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 5,
+     "group": "Ⅰ",
+     "q": "宠物自动喂食器品牌对比",
+     "searched": true,
+     "tokens": 7857,
+     "brands": [
+      "小佩",
+      "米家",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 6,
+     "group": "Ⅰ",
+     "q": "自动喂食器定时款与智能款对比",
+     "searched": true,
+     "tokens": 5284,
+     "brands": [
+      "PetSafe",
+      "小佩"
+     ]
+    },
+    {
+     "no": 7,
+     "group": "Ⅰ",
+     "q": "宠物自动喂食器容量大小对比",
+     "searched": true,
+     "tokens": 5730,
+     "brands": [
+      "PetSafe",
+      "小佩",
+      "米家",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 8,
+     "group": "Ⅰ",
+     "q": "上班族异地出差，远程控制宠物喂食如何实现？",
+     "searched": true,
+     "tokens": 2945,
+     "brands": [
+      "PAPIFEED",
+      "宠咕咕",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 9,
+     "group": "Ⅰ",
+     "q": "上班族租房养宠，空间小也能用的自动喂食解决办法",
+     "searched": true,
+     "tokens": 5210,
+     "brands": [
+      "喵享家",
+      "小佩",
+      "米家"
+     ]
+    },
+    {
+     "no": 10,
+     "group": "Ⅰ",
+     "q": "出差 7 天，哪款喂食器不会中途断粮？（按矩阵补·R3×出差）",
+     "searched": true,
+     "tokens": 5172,
+     "brands": [
+      "喵享家",
+      "小佩",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 11,
+     "group": "Ⅱ",
+     "q": "宠物自动喂食器评测",
+     "searched": true,
+     "tokens": 6724,
+     "brands": [
+      "PetSafe",
+      "Petlibro",
+      "小佩",
+      "米家",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 12,
+     "group": "Ⅱ",
+     "q": "宠物自动喂食器避坑评测",
+     "searched": true,
+     "tokens": 6871,
+     "brands": [
+      "PetSafe",
+      "喵享家",
+      "小佩",
+      "米家",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 13,
+     "group": "Ⅱ",
+     "q": "宠物自动喂食器真实使用评测",
+     "searched": true,
+     "tokens": 7086,
+     "brands": [
+      "Petlibro",
+      "小佩",
+      "米家",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 14,
+     "group": "Ⅱ",
+     "q": "宠物自动喂食器拆机评测",
+     "searched": true,
+     "tokens": 7151,
+     "brands": [
+      "喵享家",
+      "小佩",
+      "米家",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 15,
+     "group": "Ⅱ",
+     "q": "自动喂食器真的会卡粮吗？怎么避免？",
+     "searched": true,
+     "tokens": 6989,
+     "brands": [
+      "小佩",
+      "米家",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 16,
+     "group": "Ⅱ",
+     "q": "水粮一体机的饮水机部分容易滋生细菌吗？",
+     "searched": true,
+     "tokens": 3965,
+     "brands": []
+    },
+    {
+     "no": 17,
+     "group": "Ⅱ",
+     "q": "南方梅雨季，喂食器里的粮会不会受潮发霉？",
+     "searched": true,
+     "tokens": 3740,
+     "brands": [
+      "霍曼"
+     ]
+    },
+    {
+     "no": 18,
+     "group": "Ⅲ",
+     "q": "上班族早出晚归，猫咪在家饿肚子怎么办？",
+     "searched": true,
+     "tokens": 4354,
+     "brands": [
+      "小佩",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 19,
+     "group": "Ⅲ",
+     "q": "上班族白天上班，狗狗没人按时喂食怎么解决？",
+     "searched": true,
+     "tokens": 4464,
+     "brands": []
+    },
+    {
+     "no": 20,
+     "group": "Ⅲ",
+     "q": "上班族经常加班，宠物吃饭不规律影响健康怎么办？",
+     "searched": true,
+     "tokens": 6083,
+     "brands": []
+    },
+    {
+     "no": 21,
+     "group": "Ⅲ",
+     "q": "上班族出差几天，家里宠物没人喂食该如何处理？",
+     "searched": true,
+     "tokens": 3780,
+     "brands": [
+      "米家"
+     ]
+    },
+    {
+     "no": 22,
+     "group": "Ⅲ",
+     "q": "上班族通勤忙碌，忘记给宠物喂食如何避免？",
+     "searched": true,
+     "tokens": 4548,
+     "brands": [
+      "米家",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 23,
+     "group": "Ⅲ",
+     "q": "上班族独居养宠，白天没人喂猫怎样更省心？",
+     "searched": false,
+     "tokens": 23,
+     "brands": [
+      "PetSafe",
+      "米家"
+     ]
+    },
+    {
+     "no": 24,
+     "group": "Ⅲ",
+     "q": "上班族工作繁忙，宠物暴饮暴食、乱吃东西怎么控制？",
+     "searched": false,
+     "tokens": 115,
+     "brands": []
+    },
+    {
+     "no": 25,
+     "group": "Ⅲ",
+     "q": "上班族养宠没时间，如何让猫咪每天定时定量吃饭？",
+     "searched": true,
+     "tokens": 5119,
+     "brands": []
+    },
+    {
+     "no": 26,
+     "group": "Ⅲ",
+     "q": "上班族离家一整天，宠物空腹挨饿伤肠胃如何解决？",
+     "searched": true,
+     "tokens": 4993,
+     "brands": []
+    },
+    {
+     "no": 27,
+     "group": "Ⅲ",
+     "q": "上班族经常晚归，宠物等不到喂食一直叫怎么办？",
+     "searched": true,
+     "tokens": 3958,
+     "brands": [
+      "宠咕咕"
+     ]
+    },
+    {
+     "no": 28,
+     "group": "Ⅲ",
+     "q": "上班族养宠怕麻烦，手动喂食费时费力怎么改善？",
+     "searched": true,
+     "tokens": 6195,
+     "brands": []
+    },
+    {
+     "no": 29,
+     "group": "Ⅲ",
+     "q": "上班族节奏快，宠物喂食不规律导致挑食怎么调整？",
+     "searched": false,
+     "tokens": 114,
+     "brands": []
+    },
+    {
+     "no": 30,
+     "group": "Ⅲ",
+     "q": "上班族早八晚六，猫咪独自在家吃不饱如何解决？",
+     "searched": true,
+     "tokens": 1998,
+     "brands": []
+    },
+    {
+     "no": 31,
+     "group": "Ⅲ",
+     "q": "上班族养宠怕疏忽，避免漏喂、少喂的实用方法",
+     "searched": true,
+     "tokens": 4173,
+     "brands": []
+    },
+    {
+     "no": 32,
+     "group": "Ⅲ",
+     "q": "上班族没时间照顾，如何让宠物保持健康饮食习惯？",
+     "searched": true,
+     "tokens": 4400,
+     "brands": []
+    },
+    {
+     "no": 33,
+     "group": "Ⅲ",
+     "q": "上班族临时加班，无法按时喂狗怎样更安心？",
+     "searched": false,
+     "tokens": 20,
+     "brands": []
+    },
+    {
+     "no": 34,
+     "group": "Ⅲ",
+     "q": "上班族追求轻松养宠，告别手动喂食的痛点方案",
+     "searched": true,
+     "tokens": 3201,
+     "brands": []
+    },
+    {
+     "no": 35,
+     "group": "Ⅳ",
+     "q": "2026 宠物自动喂食器推荐",
+     "searched": true,
+     "tokens": 6911,
+     "brands": [
+      "喵享家",
+      "多尼斯",
+      "小佩",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 36,
+     "group": "Ⅳ",
+     "q": "智能宠物自动喂食器推荐（\"智能\"到底智能在哪）",
+     "searched": true,
+     "tokens": 6909,
+     "brands": [
+      "Petlibro",
+      "小佩",
+      "米家",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 37,
+     "group": "Ⅳ",
+     "q": "官网说能撑 7 天，实际出差一周真的够吗？（按矩阵补·R3）",
+     "searched": false,
+     "tokens": 32,
+     "brands": []
+    }
+   ]
+  },
+  "zhipu": {
+   "label": "智谱 GLM",
+   "model": "glm-5.3-flash",
+   "search_mode": "带联网检索（返回检索源全文）",
+   "records": 5,
+   "records_with_search": 5,
+   "records_without_any_brand": 0,
+   "median_input_tokens": 4511,
+   "brand_mentions": {
+    "多尼斯": 5,
+    "小佩": 4,
+    "霍曼": 4,
+    "PAPIFEED": 2,
+    "罗杰克": 2,
+    "CATLINK": 2,
+    "米家": 2,
+    "HoneyGuaridan": 1,
+    "宠咕咕": 1,
+    "PetSafe": 1,
+    "SureFeed": 1,
+    "有陪": 1,
+    "派旺": 1,
+    "美芙": 1
+   },
+   "by_intent": {
+    "Ⅰ": {
+     "records": 5,
+     "without_brand": 0,
+     "brands": {
+      "多尼斯": 5,
+      "小佩": 4,
+      "霍曼": 4,
+      "PAPIFEED": 2,
+      "罗杰克": 2,
+      "CATLINK": 2,
+      "米家": 2,
+      "HoneyGuaridan": 1,
+      "宠咕咕": 1,
+      "PetSafe": 1,
+      "SureFeed": 1,
+      "有陪": 1,
+      "派旺": 1,
+      "美芙": 1
+     }
+    }
+   },
+   "questions": [
+    {
+     "no": 1,
+     "group": "Ⅰ",
+     "q": "高性价比宠物自动喂食器推荐",
+     "searched": true,
+     "tokens": 4622,
+     "brands": [
+      "PAPIFEED",
+      "多尼斯",
+      "小佩",
+      "罗杰克",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 2,
+     "group": "Ⅰ",
+     "q": "适合多猫家庭的自动喂食器推荐",
+     "searched": true,
+     "tokens": 4867,
+     "brands": [
+      "CATLINK",
+      "HoneyGuaridan",
+      "多尼斯"
+     ]
+    },
+    {
+     "no": 3,
+     "group": "Ⅰ",
+     "q": "静音宠物自动喂食器推荐",
+     "searched": true,
+     "tokens": 4511,
+     "brands": [
+      "多尼斯",
+      "小佩",
+      "米家",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 4,
+     "group": "Ⅰ",
+     "q": "防卡粮宠物自动喂食器推荐",
+     "searched": true,
+     "tokens": 4422,
+     "brands": [
+      "多尼斯",
+      "宠咕咕",
+      "小佩",
+      "米家",
+      "霍曼"
+     ]
+    },
+    {
+     "no": 5,
+     "group": "Ⅰ",
+     "q": "宠物自动喂食器品牌对比",
+     "searched": true,
+     "tokens": 4424,
+     "brands": [
+      "CATLINK",
+      "PAPIFEED",
+      "PetSafe",
+      "SureFeed",
+      "多尼斯",
+      "小佩",
+      "有陪",
+      "派旺",
+      "罗杰克",
+      "美芙",
+      "霍曼"
+     ]
+    }
+   ]
+  }
+ },
+ "limitations": [
+  "**测的是「现状」不是「效果」。** 全部结果是「AI 现在提到谁」，属竞品诊断；**不是**「我发布的内容有没有被引用」。两者不可混用。",
+  "**单次采样的频次只有头部品牌可信。** 同一问句连问 5 次，头部品牌 5/5 稳定，长尾品牌 1–3/5 波动，5 次结果的**交集只有 2 个品牌**。低频品牌（出现 1–2 次）可能只是采样噪声。",
+  "**部分条目实际未检索。** 阿里百炼 37 条里有 5 条的输入 token 只有 20–115（中位 5,119），其中 4 条落在「…怎么办」类。涉及分类统计时需按 token 数分层。",
+  "**检索源不可见。** 阿里百炼与智谱都不返回检索结果的 URL ⇒「信源结构分析」这一层本次无法完成。",
+  "**单品类、单时点。** 只有宠物自动喂食器一个品类，测于 2026-09-24 一天。平台算法与索引随时变化，结论有时效性。",
+  "**API 层 ≠ 消费者应用层。** 本实验调用的是开放 API（deepseek-flash / qwen-flash 等），与豆包、元宝、DeepSeek 网页版的产品行为**可能不同**，不可直接等同。",
+  "**品牌词典为人工维护**，共 40 个品牌条目 + 别名归一。词典外的品牌会被漏计。"
+ ]
+}
