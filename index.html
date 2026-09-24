@@ -18,8 +18,9 @@
 <table><tr><th>平台</th><th>模型</th><th>联网检索</th><th class='n'>记录</th><th class='n'>真检索</th><th class='n'>输入 token 中位</th></tr>
 <tr><td>DeepSeek</td><td><code>deepseek-flash</code></td><td>无检索（纯模型知识）<br><span style='color:#888;font-size:13px'>工具声明被服务端静默忽略（实测 input_tokens 仅 35–43）</span></td><td class='n'>37</td><td class='n'>0</td><td class='n'>43</td></tr>
 <tr><td>阿里百炼（通义千问）</td><td><code>qwen-flash</code></td><td>带联网检索<br><span style='color:#888;font-size:13px'>enable_search + search_options 开启</span></td><td class='n'>37</td><td class='n'>32</td><td class='n'>5119</td></tr>
-<tr><td>智谱 GLM</td><td><code>glm-5.3-flash</code></td><td>带联网检索（返回检索源全文）<br><span style='color:#888;font-size:13px'>web_search 工具，返回 10 条检索全文</span></td><td class='n'>5</td><td class='n'>5</td><td class='n'>4511</td></tr>
+<tr><td>智谱 GLM</td><td><code>glm-5.3-flash</code></td><td>带联网检索（返回检索源全文）<br><span style='color:#888;font-size:13px'>web_search 工具，返回 10 条检索全文</span></td><td class='n'>37</td><td class='n'>18</td><td class='n'>36</td></tr>
 </table>
+<div class='key'><b>检索触发率差异极大：</b>DeepSeek 0% → 智谱 GLM 49% → 阿里百炼（通义千问） 86%。同样的问句、同一天，各平台自己决定要不要联网的比例从 0% 到 86% —— <b>这一步不是内容决定的，是平台决定的。</b></div>
 <div class='warn'><b>发现：声明支持 ≠ 实际生效。</b>某平台文档明示联网检索「在服务端执行」，实测三种调用方式输入 token 都只有 35–43，且接口返回 <code>200 / completed / error:null</code> —— <b>静默失败</b>，唯一的异常信号就是那个计数。</div>
 <h2>三、DeepSeek 的结果</h2>
 <p>共 37 条答复，其中 0 条真正发生检索，输入 token 中位 43；<b>27 条答复里一个品牌都没提到</b>；共出现 11 个品牌，提及最多的是 小佩（10 次）。</p>
@@ -54,24 +55,27 @@
 <tr><td>宠咕咕</td><td class='n'>2</td><td class='bar'>██</td></tr>
 <tr><td>PAPIFEED</td><td class='n'>1</td><td class='bar'>█</td></tr></table>
 <h2>三、智谱 GLM 的结果</h2>
-<p>共 5 条答复，其中 5 条真正发生检索，输入 token 中位 4511；<b>0 条答复里一个品牌都没提到</b>；共出现 14 个品牌，提及最多的是 多尼斯（5 次）。</p>
-<h3>按意图类型</h3><table><tr><th>意图类型</th><th class='n'>记录</th><th class='n'>无品牌</th><th>出现的品牌</th></tr><tr><td>Ⅰ 选型（「…推荐 / 对比 / 哪个牌子好」）</td><td class='n'>5</td><td class='n'>0</td><td>多尼斯 5、小佩 4、霍曼 4、PAPIFEED 2、罗杰克 2、CATLINK 2、米家 2、HoneyGuaridan 1</td></tr></table>
-<h3>品牌提及频次（前 20）</h3><table><tr><th>品牌</th><th class='n'>提及</th><th>强度</th></tr><tr><td>多尼斯</td><td class='n'>5</td><td class='bar'>██████████████████████</td></tr>
-<tr><td>小佩</td><td class='n'>4</td><td class='bar'>██████████████████</td></tr>
-<tr><td>霍曼</td><td class='n'>4</td><td class='bar'>██████████████████</td></tr>
-<tr><td>PAPIFEED</td><td class='n'>2</td><td class='bar'>█████████</td></tr>
-<tr><td>罗杰克</td><td class='n'>2</td><td class='bar'>█████████</td></tr>
-<tr><td>CATLINK</td><td class='n'>2</td><td class='bar'>█████████</td></tr>
-<tr><td>米家</td><td class='n'>2</td><td class='bar'>█████████</td></tr>
-<tr><td>HoneyGuaridan</td><td class='n'>1</td><td class='bar'>████</td></tr>
-<tr><td>宠咕咕</td><td class='n'>1</td><td class='bar'>████</td></tr>
-<tr><td>PetSafe</td><td class='n'>1</td><td class='bar'>████</td></tr>
-<tr><td>SureFeed</td><td class='n'>1</td><td class='bar'>████</td></tr>
-<tr><td>有陪</td><td class='n'>1</td><td class='bar'>████</td></tr>
-<tr><td>派旺</td><td class='n'>1</td><td class='bar'>████</td></tr>
-<tr><td>美芙</td><td class='n'>1</td><td class='bar'>████</td></tr></table>
+<p>共 37 条答复，其中 18 条真正发生检索，输入 token 中位 36；<b>20 条答复里一个品牌都没提到</b>；共出现 14 个品牌，提及最多的是 小佩（17 次）。</p>
+<h3>按意图类型</h3><table><tr><th>意图类型</th><th class='n'>记录</th><th class='n'>无品牌</th><th>出现的品牌</th></tr><tr><td>Ⅰ 选型（「…推荐 / 对比 / 哪个牌子好」）</td><td class='n'>10</td><td class='n'>1</td><td>小佩 9、霍曼 9、米家 7、多尼斯 6、宠咕咕 5、CATLINK 2、HoneyGuaridan 2、派旺 2</td></tr>
+<tr><td>Ⅱ 避坑（「…评测 / 会不会卡粮」）</td><td class='n'>7</td><td class='n'>3</td><td>小佩 4、米家 4、霍曼 4、鸟语花香 4</td></tr>
+<tr><td>Ⅲ 解决（「…怎么办」）</td><td class='n'>17</td><td class='n'>15</td><td>小佩 2、CATLINK 1、多尼斯 1、宠咕咕 1、米家 1、霍曼 1</td></tr>
+<tr><td>Ⅳ 求证（「7 天会不会断粮」）</td><td class='n'>3</td><td class='n'>1</td><td>PAPIFEED 2、多尼斯 2、小佩 2、米家 2、霍曼 2、CATLINK 1、罗杰克 1、宠咕咕 1</td></tr></table>
+<h3>品牌提及频次（前 20）</h3><table><tr><th>品牌</th><th class='n'>提及</th><th>强度</th></tr><tr><td>小佩</td><td class='n'>17</td><td class='bar'>██████████████████████</td></tr>
+<tr><td>霍曼</td><td class='n'>16</td><td class='bar'>█████████████████████</td></tr>
+<tr><td>米家</td><td class='n'>14</td><td class='bar'>██████████████████</td></tr>
+<tr><td>多尼斯</td><td class='n'>9</td><td class='bar'>████████████</td></tr>
+<tr><td>宠咕咕</td><td class='n'>7</td><td class='bar'>█████████</td></tr>
+<tr><td>鸟语花香</td><td class='n'>5</td><td class='bar'>██████</td></tr>
+<tr><td>CATLINK</td><td class='n'>4</td><td class='bar'>█████</td></tr>
+<tr><td>PAPIFEED</td><td class='n'>3</td><td class='bar'>████</td></tr>
+<tr><td>罗杰克</td><td class='n'>2</td><td class='bar'>███</td></tr>
+<tr><td>HoneyGuaridan</td><td class='n'>2</td><td class='bar'>███</td></tr>
+<tr><td>派旺</td><td class='n'>2</td><td class='bar'>███</td></tr>
+<tr><td>美芙</td><td class='n'>1</td><td class='bar'>█</td></tr>
+<tr><td>PetSafe</td><td class='n'>1</td><td class='bar'>█</td></tr>
+<tr><td>Petlibro</td><td class='n'>1</td><td class='bar'>█</td></tr></table>
 <h2>四、三条结论</h2>
-<div class='key'><ol><li><b>「AI 不推荐你」有两种完全不同的原因。</b>一种是模型参数里没有你的位置——实测无检索时，解决类问句的品牌可见度是 <b>0</b>，「怎么办」类问题 AI 只讲方法不给品牌；另一种是检索到了却没引用。前者改不了，后者可以靠内容策略挣。</li><li><b>AI 会自己决定要不要联网。</b>同一批问句中，输入 token 显示有约 14% 的条目根本没触发检索，且集中在「…怎么办」类。内容只覆盖这类话题，就可能连进检索池的机会都没有。</li><li><b>「AI 认知」不是一份，是每个平台一份。</b>同一天、同一批问句，平台之间的品牌集合高度不重叠，个别品牌在一处居首、在另一处一次都不出现。</li></ol></div>
+<div class='key'><ol><li><b>「AI 不推荐你」有两种完全不同的原因。</b>一种是模型参数里没有你的位置——实测无检索时，解决类问句的品牌可见度极低，「怎么办」类问题 AI 只讲方法不给品牌；另一种是检索到了却没引用。前者改不了，后者可以靠内容策略挣。</li><li><b>AI 会自己决定要不要联网，而且平台之间差异极大。</b>DeepSeek 0/37（0%）；智谱 GLM 18/37（49%）；阿里百炼（通义千问） 32/37（86%）。实测中「…怎么办」类问句的检索触发率最低——内容只覆盖这类话题，就可能连进入检索池的机会都没有。</li><li><b>「AI 认知」不是一份，是每个平台一份。</b>同一天、同一批问句，平台之间的品牌集合高度不重叠，个别品牌在一处居首、在另一处一次都不出现。</li></ol></div>
 <h2>五、局限（用之前必读）</h2><ul>
 <li><b>测的是「现状」不是「效果」。</b> 全部结果是「AI 现在提到谁」，属竞品诊断；<b>不是</b>「我发布的内容有没有被引用」。两者不可混用。</li>
 <li><b>单次采样的频次只有头部品牌可信。</b> 同一问句连问 5 次，头部品牌 5/5 稳定，长尾品牌 1–3/5 波动，5 次结果的<b>交集只有 2 个品牌</b>。低频品牌（出现 1–2 次）可能只是采样噪声。</li>
